@@ -1,9 +1,9 @@
 class Quadruped extends Walker{
   
   
-  Quadruped(float spineHeadX, float spineHeadY, float spineLength, float neckLength, float legLength, float speedMultiplier)
+  Quadruped(float spineHeadX, float spineHeadY, float spineLength, float neckLength, float legLength, float speedMultiplier, color colour)
   {
-    super(spineHeadX, spineHeadY, spineLength, neckLength, legLength, speedMultiplier);
+    super(spineHeadX, spineHeadY, spineLength, neckLength, legLength, speedMultiplier, colour);
   }
   
   void render()

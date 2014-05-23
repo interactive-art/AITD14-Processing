@@ -10,13 +10,15 @@ void setup()
   {
     float yPos = random(500);
     float xPos = random(75,525);
-    walkerList.add(new Quadruped(xPos, yPos, random(75,125), random(15,50), random(35,75), random(0, 1.5)));
+    color colour = color(random(255), random(255), random(255));
+    walkerList.add(new Quadruped(xPos, yPos, random(75,125), random(15,50), random(35,75), random(0, 1.5), colour));
   }
   for(int i = 0; i < 5; i++)
   {
     float yPos = random(500);
     float xPos = random(75,525);
-    walkerList.add(new Biped(xPos, yPos, random(0,15), random(15,50), random(35,75), random(0, 1.5)));
+    color colour = color(random(255), random(255), random(255));
+    walkerList.add(new Biped(xPos, yPos, random(0,15), random(15,50), random(35,75), random(0, 1.5), colour));
   }
 }
 

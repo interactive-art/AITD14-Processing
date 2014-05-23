@@ -3,8 +3,9 @@ abstract class Walker extends Creature {
   PVector spineHead, spineTail;                               // can refer to the same object
   float neckLength, legLength, spineLength, speedMultiplier;  // from constructor
   float headAngle, legAngle;                                  // internally calculated
+  color colour;
   
-  Walker(float spineHeadX, float spineHeadY, float spineLength, float neckLength, float legLength, float speedMultiplier)
+  Walker(float spineHeadX, float spineHeadY, float spineLength, float neckLength, float legLength, float speedMultiplier, color colour)
   {
     spineHead = new PVector(spineHeadX, spineHeadY);
     spineTail = new PVector(spineHeadX - spineLength, spineHeadY);
@@ -12,7 +13,7 @@ abstract class Walker extends Creature {
     this.neckLength = neckLength;
     this.legLength  = legLength;
     this.speedMultiplier = speedMultiplier;
-    
+    this.colour = colour;
   }  
   
   void update()
@@ -26,7 +27,8 @@ abstract class Walker extends Creature {
   abstract void render();
   
   void renderCommon()
-  {
+  { 
+    stroke(colour);
     drawHead();
     drawSpine();
     drawTail();
